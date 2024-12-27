@@ -1,8 +1,9 @@
 import logo from "./../assets/images/logo.png";
 import { navLinks } from "../constants";
+import menuIcon from "./../assets/icons/menu-icon.png";
 const Nav = () => {
   return (
-    <header className="fixed w-full h-[40px] flex justify-between  items-center container-max py-[50px]">
+    <header className=" absolute w-full h-[40px] flex justify-between  items-center container-max py-[50px]">
       <nav className="flex flex-row lg:gap-[96px] max-lg:gap-[46px] items-center">
         <a href="/">
           <img src={logo} width={184} height={40} alt="logo" />
@@ -22,12 +23,15 @@ const Nav = () => {
         </ul>
       </nav>
 
-      <div>
+      <div className="flex items-center">
         <button className="px-[53px] py-[10.5px] text-[16px] text-textSecondaryColor hover:text-primaryColor transition-colors">
           sign in
         </button>
         <button className="px-[53px] py-[10.5px] max-lg:hidden border-2 border-[#465B95] rounded-full text-[16px] text-textSecondaryColor hover:text-primaryColor hover:border-primaryColor transition-colors">
           sign up
+        </button>
+        <button className=" hidden max-md:block">
+          <img src={menuIcon} alt="menu icon" />
         </button>
       </div>
     </header>
